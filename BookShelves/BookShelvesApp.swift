@@ -1,6 +1,6 @@
 //
 //  BookShelvesApp.swift
-//  BookShelves
+//  Character
 //
 //  Created by Daniel Konnek on 20.10.2024.
 //

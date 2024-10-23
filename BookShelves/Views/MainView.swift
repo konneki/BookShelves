@@ -1,6 +1,6 @@
 //
 //  MainView.swift
-//  BookShelves
+//  Character
 //
 //  Created by Daniel Konnek on 20.10.2024.
 //
@@ -16,6 +16,11 @@ struct MainView: View {
             Text("Hello, world!")
         }
         .padding()
+        .task {
+            let service = DataService(language: .english)
+            let response = await service.fetchData(for: Spell.self, of: .spells)
+            print(response)
+        }
     }
 }
 
