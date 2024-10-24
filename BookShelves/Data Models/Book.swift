@@ -1,6 +1,6 @@
 //
 //  Book.swift
-//  Book
+//  BookShelves
 //
 //  Created by Daniel Konnek on 20.10.2024.
 //
