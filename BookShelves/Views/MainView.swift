@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MainView: View {
+    
+    @Environment(\.modelContext) var context
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
