@@ -10,9 +10,9 @@ import SwiftData
 
 @Model
 class LanguageData {
-    @Attribute(.unique) var language: Language
+    var language: Language
     
-    init(language: Language) {
-        self.language = .english
+    init(language: Language = .english) {
+        self.language = language
     }
 }

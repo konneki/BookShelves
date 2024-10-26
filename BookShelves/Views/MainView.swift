@@ -11,21 +11,25 @@ import SwiftData
 struct MainView: View {
     
     @Environment(\.modelContext) var context
+    @State var selectedTab: Int = 0
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            Tab("Saved", systemImage: "bookmark", value: 0) {
+                SavedItemsView()
+            }
+            
+            Tab("Search", systemImage: "magnifyingglass", value: 1) {
+                SearchView()
+            }
+            
+            Tab("Settings", systemImage: "gearshape", value: 2) {
+                SettingsView()
+            }
         }
         .padding()
-        .task {
-            let service = DataService(language: .english)
-            let response = await service.fetchData(for: Spell.self, of: .spells)
-            print(response)
-        }
     }
+    
 }
 
 #Preview {

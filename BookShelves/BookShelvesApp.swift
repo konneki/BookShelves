@@ -13,7 +13,7 @@ struct BookShelvesApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .modelContainer(for: [BookData.self, CharacterData.self, HouseData.self, SpellData.self])
+                .modelContainer(for: [BookData.self, CharacterData.self, HouseData.self, SpellData.self, LanguageData.self])
         }
     }
 }
